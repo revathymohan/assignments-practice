@@ -13,11 +13,17 @@ public class ReverseNumber {
 		// TODO Auto-generated method stub
 		
 		int n = number;
+		if (number<0) {
+			n = -1* number;
+		}
 		int reverse= 0;
 		while(n>0) {
 			int digit = n%10;
 			n= n/10;
 			reverse = reverse*10+ digit;
+		}
+		if (number<0) {
+			reverse = -1* reverse;
 		}
 		System.out.println("Reverse is "+ reverse);
 		
